@@ -9,22 +9,19 @@ public class Motorino {
         this.colore = colore;
         this.tipo = tipo;
         this.velocità = velocità;
-        this.antifurto = false; // inizialmente l'antifurto è disattivato
+        this.antifurto = false; 
     }
 
-    // Metodo per ottenere la velocità attuale
     public double getVelocità() {
         return velocità;
     }
 
-    // Metodo per accelerare il motorino
     public void accelera(double incremento) {
         if (!antifurto) {
             this.velocità += incremento;
         }
     }
 
-    // Metodo per attivare l'antifurto
     public void inserisciAntifurto() {
         this.antifurto = true;
     }

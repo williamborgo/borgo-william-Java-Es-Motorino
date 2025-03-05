@@ -9,20 +9,25 @@ public class MotorinoImmatricolato extends Motorino {
         this.targa = targa;
     }
 
-    // Metodo per ottenere la velocità massima
+
     public double getMax() {
         return maxVelocità;
     }
 
-    // Ridefinizione del metodo accelera
+
     @Override
     public void accelera(double incremento) {
         if (!antifurto) {
             double nuovaVelocità = getVelocità() + incremento;
             if (nuovaVelocità < maxVelocità) {
-                super.accelera(incremento); // usa il metodo della classe base
+                super.accelera(incremento); 
+                
             } else {
-                super.accelera(maxVelocità - getVelocità()); // limita alla velocità massima
+                super.accelera(maxVelocità - getVelocità()); 
+
+
+
+                
             }
         }
     }
